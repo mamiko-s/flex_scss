@@ -1,0 +1,225 @@
+@media (min-width: 1000px) {
+    header {
+        min-height: 90vh;
+        display: flex;
+        justify-content: center;
+
+        >article {
+            width: 70%;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+
+            >div {
+                z-index: 2;
+            }
+        }
+
+        [class^="fa-"] {
+            font-size: 20px;
+            padding: 1%;
+        }
+
+        p {
+            width: 15vh;
+            height: 15vh;
+        }
+
+        nav {
+            height: unset;
+            width: 70%;
+            position: fixed;
+            z-index: 1;
+
+            >div {
+                column-gap: 30px;
+            }
+        }
+    }
+
+    details {
+        display: none;
+    }
+
+    nav>ul {
+        padding-top: 3px;
+        width: 60%;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    nav li {
+        width: fit-content;
+        list-style-type: none;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    nav a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        text-decoration: none;
+        color: gray;
+
+        &:hover {
+            border-top: 4px solid $defaultColor;
+            color: $defaultColor;
+        }
+    }
+
+    main {
+        padding: 10%;
+
+        &>section {
+            padding-left: 0%;
+            padding-right: 0%;
+        }
+    }
+
+    .services {
+        h3 {
+            border-bottom: 1px solid white;
+            width: fit-content;
+        }
+
+        >article:nth-child(2) {
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        div {
+            display: none;
+        }
+
+        aside {
+            width: 35vh;
+            height: 35vh;
+        }
+
+        aside:hover {
+            i {
+                display: none;
+            }
+
+            div {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+
+    .pics {
+
+        >aside:nth-child(even),
+        >aside:nth-child(odd) {
+            width: 35vh;
+            height: 35vh;
+        }
+
+        >aside:hover {
+            background-image: none;
+            background-color: $defaultColor;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            >h3,
+            >p,
+            >a {
+                display: block;
+                text-align: center;
+            }
+
+            >h3 {
+                padding: 4%;
+                border-bottom: 1px solid white;
+                font-weight: 300;
+            }
+
+            >p {
+                font-weight: 300;
+                padding: 4%;
+            }
+
+            >a {
+                text-decoration: none;
+                color: $defaultColor;
+                background-color: white;
+                border-radius: 50%;
+                padding: 4%;
+            }
+        }
+    }
+
+    %profile-pic-desktop {
+        width: 30vh;
+        height: 30vh;
+    }
+
+    .profiles {
+
+        >aside:nth-child(odd),
+        >aside:nth-child(even) {
+            @extend %profile-pic-desktop;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            row-gap: 15px;
+            color: white;
+        }
+
+        >aside:hover {
+            background-image: none;
+            background-color: $defaultColor;
+
+            >h3,
+            >span,
+            >div {
+                display: block;
+            }
+
+            >h3 {
+                border-bottom: 1px solid white;
+                font-weight: 300;
+            }
+
+            >div {
+                width: 50%;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            a {
+                border-radius: 50%;
+                padding: 6%;
+                font-size: 24px;
+                color: $defaultColor;
+                text-decoration: none;
+                background-color: white;
+            }
+        }
+    }
+
+    .skill-description {
+        width: 100%;
+    }
+
+    .progress-bar {
+        span {
+            height: 4vh;
+        }
+    }
+
+    footer {
+        padding-left: 10%;
+        padding-right: 10%;
+        justify-content: unset;
+        column-gap: 25px;
+    }
+}

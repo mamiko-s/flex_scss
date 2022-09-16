@@ -1,0 +1,147 @@
+@media (min-width: 600px) {
+
+    header {
+        >article {
+            flex-direction: column;
+            background-color: unset;
+        }
+
+        div {
+            align-items: center;
+        }
+
+        [class^="fa-"] {
+            padding: 2%;
+            border-radius: 50%;
+            background-color: white;
+            font-size: 20px;
+        }
+
+        [class*="fa-bars"] {
+            background-color: $defaultColor;
+            border-radius: 0%;
+            padding: 3%;
+            max-width: 5vh;
+            max-height: 5vh;
+        }
+    }
+
+    nav {
+        padding: 0;
+        box-shadow: none;
+        height: 5vh;
+    }
+
+    details {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    details[open] {
+        overflow: visible;
+    }
+
+    .services {
+        >article:nth-child(2) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        aside {
+            width: 45%;
+            padding: 1%;
+            row-gap: 0px;
+        }
+
+        div {
+            row-gap: 5px;
+        }
+    }
+
+    %gallery-pic {
+        width: 30vh;
+        height: 30vh;
+    }
+
+    .pics {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        >aside:nth-child(odd),
+        >aside:nth-child(even) {
+            @extend %gallery-pic;
+        }
+    }
+
+    %profile-pic {
+        width: 25vh;
+        height: 25vh;
+    }
+
+    .profiles {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        >aside:nth-child(1) {
+            @extend %profile-pic;
+        }
+
+        >aside:nth-child(2) {
+            @extend %profile-pic;
+        }
+
+        >aside:nth-child(3) {
+            @extend %profile-pic;
+        }
+
+        >aside:nth-child(4) {
+            @extend %profile-pic;
+        }
+    }
+
+    .design-skills {
+        >div:nth-child(2) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: unset;
+            column-gap: 40px;
+        }
+    }
+
+    .skill-description {
+        width: 50%;
+    }
+
+    .progress-bar {
+        width: 50%;
+
+        span {
+            height: 3vh;
+        }
+    }
+
+    .contact {
+
+        >article:nth-child(2) {
+            flex-direction: row;
+            justify-content: space-between;
+
+            >article {
+                width: 100%;
+            }
+        }
+
+        form {
+            width: 80%;
+            align-items: flex-end;
+        }
+
+        p {
+            width: 90%;
+            text-align: justify;
+        }
+    }
+}
